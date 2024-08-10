@@ -1,24 +1,56 @@
-Табота Алексей
-Группа Вт-523
+# WebApache2
 
-    "Docker-compose"
+## Описание проекта
+
+**WebApache2** - это проект, который предоставляет Docker-контейнер с установленным и настроенным веб-сервером Apache2. Этот проект предназначен для упрощения развертывания и управления веб-сервером Apache2 в контейнеризированной среде.
+
+## Функциональность
+
+- **Легкое развертывание**: Проект позволяет быстро развернуть веб-сервер Apache2 с помощью Docker.
+- **Настраиваемость**: Возможность настройки конфигурационных файлов Apache2 в контейнере.
+- **Изоляция окружения**: Использование Docker-контейнера обеспечивает изоляцию веб-сервера от основной системы, что повышает безопасность и стабильность.
+- **Поддержка различных платформ**: Контейнер может быть запущен на любой платформе, поддерживающей Docker.
+
+## Установка и запуск
+
+1. **Клонирование репозитория**:
+    ```bash
+    git clone https://github.com/Fa2416sp/webapache2.git
+    cd webapache2
+    ```
+
+2. **Сборка Docker-образа**:
+    ```bash
+    docker build -t webapache2 .
+    ```
+
+3. **Запуск контейнера**:
+    ```bash
+    docker run -d -p 80:80 webapache2
+    ```
+
+## Использование
+
+После запуска контейнера, веб-сервер Apache2 будет доступен по адресу `http://localhost`. Ты можешь настроить конфигурационные файлы Apache2, находящиеся в контейнере, для удовлетворения своих потребностей.
+
+### Docker-compose
 
 просто запуск
-docker-compose up
+`docker-compose up`
 
 запуск в фоне
-docker-compose up -d
+`docker-compose up -d`
 
-подключеник к контейнеру
-docker exec -it <container_id> bash
+подключение к контейнеру
+`docker exec -it <container_id> bash`
 
-    "Docker"
+### Docker
 
 установка контейнера
-docker build -t my-apache2 .
+`docker build -t my-apache2 .`
 
 запуск контейнера
-docker run -d -v ./htdocs/:/usr/local/apache2/htdocs/ -p 80:80 httpd:2.4
+`docker run -d -v ./htdocs/:/usr/local/apache2/htdocs/ -p 80:80 httpd:2.4`
 
-подключеник к контейнеру
-docker exec -it <container_id> bash
+подключение к контейнеру
+`docker exec -it <container_id> bash`
