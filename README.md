@@ -85,6 +85,6 @@ docker compose logs -f
 
 ---
 
-## 👤 Автор
+## Автор
 
 https://github.com/Fa2416sp
